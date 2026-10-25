@@ -1,33 +1,37 @@
 {
-  "default_category": {
-    "description": "默认插画分类",
+  "data_source": {
+    "description": "图片来源",
     "type": "string",
-    "default": "waifu",
+    "default": "nekosapi",
     "options": [
-      "waifu",
-      "neko",
-      "kitsune",
-      "husbando"
+      "lolicon",
+      "nekosapi"
     ],
-    "hint": "waifu=少女，neko=猫娘，kitsune=狐娘，husbando=少年"
+    "hint": "lolicon=Pixiv 图源，标签丰富（459 条）；nekosapi=英文标签源（约 44 个），规模较小。可在指令中用 #nekosapi 临时切换"
+  },
+  "default_tag": {
+    "description": "默认标签（不填标签时使用）",
+    "type": "string",
+    "default": "",
+    "hint": "留空表示随机全年龄插画；例如填「女仆」则 /插画 默认返回女仆图"
   },
   "max_count": {
     "description": "单次最多图片数",
     "type": "int",
     "default": 3,
-    "hint": "范围 1～5"
+    "hint": "范围 1～10"
   },
   "cooldown_seconds": {
     "description": "同一会话内每位用户的请求冷却（秒）",
     "type": "int",
     "default": 10,
-    "hint": "范围 0～3600；请求被接受时开始计时，失败也计入冷却"
+    "hint": "范围 0～3600"
   },
   "timeout_seconds": {
     "description": "单次 HTTP 请求超时（秒）",
     "type": "int",
-    "default": 25,
-    "hint": "范围 5～120；超时可按重试次数重试"
+    "default": 30,
+    "hint": "范围 5～120"
   },
   "retries": {
     "description": "网络错误、HTTP 429 / 5xx 重试次数",
@@ -39,10 +43,26 @@
     "description": "单张图片大小上限（MiB）",
     "type": "int",
     "default": 10,
-    "hint": "范围 1～20；过大的图片会跳过"
+    "hint": "范围 1～20"
+  },
+  "image_size": {
+    "description": "图片尺寸档位（仅 lolicon 图源有效）",
+    "type": "string",
+    "default": "regular",
+    "options": [
+      "regular",
+      "original",
+      "small"
+    ],
+    "hint": "regular=常规；original=原图；small=缩略图"
+  },
+  "exclude_ai": {
+    "description": "排除 AI 生成作品（仅 lolicon 图源有效）",
+    "type": "bool",
+    "default": true
   },
   "show_credit": {
-    "description": "随图片显示画师与原作链接",
+    "description": "随图片显示画师与作品信息",
     "type": "bool",
     "default": true
   }
