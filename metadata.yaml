@@ -1,0 +1,6 @@
+name: astrbot_plugin_random_illustration
+display_name: 全年龄随机插画
+desc: 通过指令发送全年龄动漫插画，支持分类、数量、冷却和失败重试。
+version: v1.0.0
+author: Local
+repo: ""

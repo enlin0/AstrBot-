@@ -1,0 +1,49 @@
+{
+  "default_category": {
+    "description": "默认插画分类",
+    "type": "string",
+    "default": "waifu",
+    "options": [
+      "waifu",
+      "neko",
+      "kitsune",
+      "husbando"
+    ],
+    "hint": "waifu=少女，neko=猫娘，kitsune=狐娘，husbando=少年"
+  },
+  "max_count": {
+    "description": "单次最多图片数",
+    "type": "int",
+    "default": 3,
+    "hint": "范围 1～5"
+  },
+  "cooldown_seconds": {
+    "description": "同一会话内每位用户的请求冷却（秒）",
+    "type": "int",
+    "default": 10,
+    "hint": "范围 0～3600；请求被接受时开始计时，失败也计入冷却"
+  },
+  "timeout_seconds": {
+    "description": "单次 HTTP 请求超时（秒）",
+    "type": "int",
+    "default": 25,
+    "hint": "范围 5～120；超时可按重试次数重试"
+  },
+  "retries": {
+    "description": "网络错误、HTTP 429 / 5xx 重试次数",
+    "type": "int",
+    "default": 2,
+    "hint": "范围 0～3"
+  },
+  "max_image_mb": {
+    "description": "单张图片大小上限（MiB）",
+    "type": "int",
+    "default": 10,
+    "hint": "范围 1～20；过大的图片会跳过"
+  },
+  "show_credit": {
+    "description": "随图片显示画师与原作链接",
+    "type": "bool",
+    "default": true
+  }
+}
