@@ -188,6 +188,10 @@ class MyProvider:
 
 ## 变更记录
 
+### v1.2.2
+
+- 日志规范整改：`main.py` 与 `providers.py` 的 logger 统一改为 `from astrbot.api import logger`，移除内置 `logging` 模块依赖
+
 ### v1.2.0
 
 - 数据源由 nekos.best 更换为可插拔架构（Lolicon / nekosapi）
