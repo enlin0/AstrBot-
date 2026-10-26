@@ -9,10 +9,9 @@
 """
 
 import json
-import logging
 from urllib.parse import quote
 
-logger = logging.getLogger(__name__)
+from astrbot.api import logger
 
 
 class ProviderError(Exception):

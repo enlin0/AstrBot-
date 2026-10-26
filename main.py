@@ -1,7 +1,6 @@
 import asyncio
 import io
 import json
-import logging
 import math
 import re
 import time
@@ -9,7 +8,7 @@ from collections import OrderedDict
 from urllib.parse import quote, urlsplit
 
 import aiohttp
-from astrbot.api import AstrBotConfig
+from astrbot.api import AstrBotConfig, logger
 from astrbot.api.event import AstrMessageEvent, filter
 from astrbot.api.message_components import Image, Plain
 from astrbot.api.star import Context, Star, register
@@ -22,8 +21,6 @@ except ImportError:  # 兼容以脚本方式加载
     from tags import ALIASES, GROUPS, TOTAL_TAGS
     from providers import ProviderError, get_provider
     import tags_nekosapi
-
-logger = logging.getLogger(__name__)
 
 USER_AGENT = "AstrBotRandomIllustration/1.2 (https://github.com/AstrBotDevs/AstrBot)"
 
