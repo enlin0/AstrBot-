@@ -1,10 +1,11 @@
 name: astrbot_plugin_random_illustration
 display_name: 全年龄随机插画
-desc: 调用了nekosapi的api，多数据源动漫插画插件，支持中文标签搜索、多标签组合、数量控制、用户冷却与失败重试。
+desc: 已屏蔽18+内容，调用了nekosapi的api，多数据源动漫插画插件，支持中文标签搜索、多标签组合、数量控制、用户冷却与失败重试。
 version: v1.2.3
 author: enlin
 repo: "https://github.com/enlin0/AstrBot-Randomillustration"
-tags:                                      # （可选）标签列表，用于插件市场分类和搜索
-   - 娱乐
-   - 工具
-   - 其他
+astrbot_version: ">=4.29.3" 
+support_platforms:
+   - aiocqhttp
+   - qq_official
+tags: 娱乐
